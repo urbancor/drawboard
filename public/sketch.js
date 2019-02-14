@@ -28,7 +28,7 @@ function draw() {
     for(var i = 0; i < colors.length; i++){
         colors[i].show();
     }
-    console.log("x: "+mouseX+", y: "+mouseY);
+    //console.log("x: "+mouseX+", y: "+mouseY);
 }
 function newDrawing(data) {
     noStroke();
