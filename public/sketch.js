@@ -12,23 +12,22 @@ function setup() {
 
     createCanvas(1800, 940);
     background(0);
-    socket = io.connect('http://localhost:3000');
+    socket = io.connect('http://localhost:80');
 
     socket.on('mouse', newDrawing);
     
-    colors.push(new Color(255,0,0,30));
-    colors.push(new Color(0,255,0,80));
-    colors.push(new Color(0,0,255,130));
-    colors.push(new Color(255,255,0,180));
-    colors.push(new Color(255,128,0,230));
-    colors.push(new Color(127,0,255,280));
+    colors.push(new Color(255,0,0,45));
+    colors.push(new Color(0,255,0,125));
+    colors.push(new Color(0,0,255,205));
+    colors.push(new Color(255,255,0,285));
+    colors.push(new Color(255,128,0,365));
+    colors.push(new Color(127,0,255,445));
 
 }
 function draw() {
     for(var i = 0; i < colors.length; i++){
         colors[i].show();
-    }
-    //console.log("x: "+mouseX+", y: "+mouseY);
+    } 
 }
 function newDrawing(data) {
     noStroke();
