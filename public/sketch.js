@@ -16,8 +16,8 @@ function setup() {
     backCanvas = createGraphics(1800, 940);
     backCanvas.clear();
     background(0);
-    //socket = io.connect('http://83.212.127.146:80');
-    socket = io.connect('http://localhost:80');
+    socket = io.connect('http://83.212.127.146:80');
+    //socket = io.connect('http://localhost:80');
 
     socket.on('mouse', newDrawing);
     
@@ -37,7 +37,7 @@ function draw() {
     fill(drawingColor.r, drawingColor.g, drawingColor.b);
     ellipse(mouseX, mouseY, 15, 15);
     for(var i = 0; i < colors.length; i++){
-        colors[i].show();
+        backCanvas.colors[i].show();
     } 
     image(backCanvas, 0, 0);
 }
